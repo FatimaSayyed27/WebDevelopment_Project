@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaFlow - Creative Startup</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(270deg, #fdf6e3, #f8d9e0, #e3fdf5, #fef9d7);
+      background-size: 800% 800%;
+      animation: gradientShift 15s ease infinite;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 8%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid #eee;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #e85d75;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e85d75;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      background: #e85d75;
+      color: white;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(232, 93, 117, 0.4);
+    }
+
+    .divider {
+      height: 80px;
+      background: white;
+      clip-path: ellipse(70% 100% at 50% 0%);
+      margin-top: -40px;
+    }
+
+    .features {
+      background: white;
+      padding: 4rem 8%;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      text-align: center;
+    }
+
+    .feature-card {
+      background: #fffafc;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover { transform: translateY(-8px); }
+
+    .feature-card h3 {
+      font-size: 1.4rem;
+      margin: 1rem 0;
+      color: #e85d75;
+    }
+
+    .feature-card span {
+      font-size: 2.5rem;
+      display: block;
+    }
+
+    .testimonials {
+      padding: 4rem 8%;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .testimonial {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1.2rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .testimonial:hover { transform: scale(1.02); }
+
+    .testimonial p {
+      font-style: italic;
+    }
+
+    .testimonial h4 {
+      margin-top: 1rem;
+      color: #e85d75;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e85d75;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 { font-size: 2rem; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>CastAway</h1>
+    <nav>
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Innovate. Create. Elevate.</h2>
+    <p>CastAway empowers startups and dreamers to transform sparks of inspiration into powerful realities with modern tools and insights.</p>
+    <a href="#features" class="btn-primary">Get Started</a>
+  </section>
+
+
+  <div class="divider"></div>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="feature-card">
+      <span>⚡</span>
+      <h3>Lightning Speed</h3>
+      <p>Launch your product at record speed with automation and smart templates.</p>
+    </div>
+    <div class="feature-card">
+      <span>🎨</span>
+      <h3>Creative Freedom</h3>
+      <p>Customize everything with endless design options that reflect your vision.</p>
+    </div>
+    <div class="feature-card">
+      <span>🌍</span>
+      <h3>Worldwide Access</h3>
+      <p>Break barriers and scale globally with integrated translation and support.</p>
+    </div>
+    <div class="feature-card">
+      <span>🔒</span>
+      <h3>Secure & Reliable</h3>
+      <p>Enterprise-grade security ensures your ideas are safe and trusted.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2>What People Are Saying</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>“CastAway gave us the confidence to scale our startup faster than ever. A true game-changer!”</p>
+        <h4>- Maria Lopez</h4>
+      </div>
+      <div class="testimonial">
+        <p>“The creativity tools are unmatched. I feel like I finally have control over my vision.”</p>
+        <h4>- Akash Mehta</h4>
+      </div>
+      <div class="testimonial">
+        <p>“It’s more than software; it’s like having a growth partner always by your side.”</p>
+        <h4>- Emily Carter</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 CastAway. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

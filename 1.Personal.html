@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Creative Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border-radius: 30px;
+      padding: 0.8rem 2rem;
+      display: flex;
+      gap: 2rem;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to right, #1e3a8a, #2563eb, #3b82f6);
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      animation: fadeInDown 1.2s ease-in-out;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      opacity: 0.9;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .hero img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 1rem;
+    }
+
+
+    section {
+      padding: 5rem 10%;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #60a5fa;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .skill, .social a {
+      display: inline-block;
+      background: #2563eb;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 25px;
+      margin: 5px;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .skill:hover, .social a:hover {
+      background: #1e40af;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1e293b;
+      color: #94a3b8;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src= "image\1000_F_643686558_Efl6HB1ITw98bx1PdAd1wy56QpUTMh47.jpg" alt="Your Picture">
+    <h1>Hi, I’m Fatima Sayyed 👋</h1>
+    <p>Creative Web Developer | Java Developer | Problem Solver</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align:center; max-width:700px; margin:auto;">I’m a passionate web developer who loves crafting clean, modern, and user-friendly websites. With a knack for solving problems and a creative mindset, I bring ideas to life with code.</p>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Bachelor of Computer Application</h3>
+        <p>Computer Science | XYZ University<br>2023 - presents</p>
+      </div>
+      <div class="card">
+        <h3>High School</h3>
+        <p>ABC Public School<br>2020 - 2023</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div style="text-align:center;">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">React</span>
+      <span class="skill">Node.js</span>
+      <span class="skill">Python</span>
+      <span class="skill">SQL</span>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>A personal website showcasing my skills, education, and projects using HTML, CSS, and JavaScript.</p>
+      </div>
+      
+      <div class="card">
+        <h3>E-commerce Store</h3>
+        <p>A fully functional online store built using React and Node.js.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">Let’s connect! Reach out via email or find me on social media.</p>
+    <div class="social" style="text-align:center; margin-top:1rem;">
+      <a href="#">📧 Email</a>
+      <a href="#">💼 LinkedIn</a>
+      <a href="#"> 📸 Instagram</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; abc27@gmail.com</p>
+  </footer>
+
+</body>
+</html>

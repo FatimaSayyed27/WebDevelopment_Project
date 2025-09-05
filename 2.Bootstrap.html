@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events & Restaurant Menu</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0f172a; 
+      color: #f8fafc;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .card {
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    footer {
+      background: #1e293b;
+      color: #cbd5e1;
+    }
+    footer a {
+      color: #38bdf8;
+      margin: 0 10px;
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">FoodWorld</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero d-flex flex-column justify-content-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to Our Events & Menu</h1>
+      <p class="lead">Discover delicious dishes & exciting events, all in one place.</p>
+      <a href="#menu" class="btn btn-primary btn-lg mt-3">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Special Menu</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card bg-dark text-light">
+            <img src="image\istockphoto-1171008705-170667a.jpg" class="card-img-top" alt="Pizza">
+            <div class="card-body">
+              <h5 class="card-title">Cheesy Pizza</h5>
+              <p class="card-text">Delicious wood-fired pizza with extra cheese and fresh toppings.</p>
+              <button class="btn btn-outline-light">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-dark text-light">
+            <img src="image\OIP.webp" class="card-img-top" alt="Pasta">
+            <div class="card-body">
+              <h5 class="card-title">Italian Pasta</h5>
+              <p class="card-text">Authentic Italian pasta made with rich tomato sauce and herbs.</p>
+              <button class="btn btn-outline-light">Order Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-dark text-light">
+            <img src="image\delicious-hamburger-cola-potato-fries-600nw-1981515179.jpg" class="card-img-top" alt="Burger">
+            <div class="card-body">
+              <h5 class="card-title">Juicy Burger</h5>
+              <p class="card-text">A big juicy burger with crispy fries and a cold drink combo.</p>
+              <button class="btn btn-outline-light">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="py-5 bg-dark text-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Upcoming Events</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card bg-secondary text-light">
+            <img src="image\uue51ysj.bmp.jpg" class="card-img-top" alt="Concert">
+            <div class="card-body">
+              <h5 class="card-title">Live Music Night</h5>
+              <p class="card-text">Enjoy an unforgettable night with live performances from top artists.</p>
+              <a href="#" class="btn btn-outline-light">Book Ticket</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card bg-secondary text-light">
+            <img src="image\DSC_9042-1024x683.jpg" class="card-img-top" alt="Wine Tasting">
+            <div class="card-body">
+              <h5 class="card-title">Wine Tasting Event</h5>
+              <p class="card-text">Savor a selection of premium wines paired with gourmet appetizers.</p>
+              <a href="#" class="btn btn-outline-light">Book Ticket</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="text-center py-4">
+    <p>&copy; 2025 FoodWorld. All Rights Reserved.</p>
+    <div>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

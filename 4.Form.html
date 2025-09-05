@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application / Contact Form</title>
+  <style>
+   
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f4f9c4, #cceabb, #b5ead7, #c7ceea);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .form-container {
+      background: #fffefc;
+      padding: 2rem 2.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 450px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #4a7c59;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.2rem;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      outline: none;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #4a7c59;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 0.9rem;
+      background: #4a7c59;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(74,124,89,0.3);
+    }
+
+    .error {
+      color: #e63946;
+      font-size: 0.85rem;
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <div id="nameError" class="error"></div>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <div id="emailError" class="error"></div>
+
+      <label for="phone">Phone</label>
+      <input type="text" id="phone" placeholder="Enter your phone number">
+      <div id="phoneError" class="error"></div>
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Write your message..."></textarea>
+      <div id="messageError" class="error"></div>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      let isValid = true;
+
+      document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+      // Name validation
+      const name = document.getElementById('name').value.trim();
+      if (name.length < 3) {
+        document.getElementById('nameError').textContent = "Name must be at least 3 characters.";
+        isValid = false;
+      }
+
+      // Email validation
+      const email = document.getElementById('email').value.trim();
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!email.match(emailPattern)) {
+        document.getElementById('emailError').textContent = "Enter a valid email address.";
+        isValid = false;
+      }
+
+      // Phone validation
+      const phone = document.getElementById('phone').value.trim();
+      const phonePattern = /^[0-9]{10}$/;
+      if (!phone.match(phonePattern)) {
+        document.getElementById('phoneError').textContent = "Enter a valid 10-digit phone number.";
+        isValid = false;
+      }
+
+      // Message validation
+      const message = document.getElementById('message').value.trim();
+      if (message.length < 10) {
+        document.getElementById('messageError').textContent = "Message must be at least 10 characters.";
+        isValid = false;
+      }
+
+      if (isValid) {
+        alert("Form submitted successfully");
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
